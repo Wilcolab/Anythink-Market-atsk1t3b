@@ -149,7 +149,8 @@ async function generateImage(prompt) {
       'Authorization': `Bearer ${process.env.OPENAI_API_KEY}`
     }
   }).then(function (response) {
-    return response.data.data[0].url;
+    console.log(response.data.data[0].url);
+    return response.data.data[0].url;    
   })
     .catch(function (error) {
       console.log(`Image genrator failed with the error: ${error}`)
