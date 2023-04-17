@@ -166,7 +166,7 @@ router.post("/", auth.required, function (req, res, next) {
       }
 
       var item = new Item(req.body.item);
-
+      console.log(item);
       item.seller = user;
 
       if(!item.image) {
